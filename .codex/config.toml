@@ -1,8 +1,3 @@
 [mcp_servers.datadoe]
 url = "https://api.datadoe.com/mcp/v1"
-env_http_headers = { datadoe-mcp-key = "DATADOE_MCP_KEY" }
-
-# Fallback example (direct key; prefer env-based above):
-# [mcp_servers.datadoe]
-# url = "https://api.datadoe.com/mcp/v1"
-# http_headers = { datadoe-mcp-key = "your_key_here" }
+http_headers = { datadoe-mcp-key = "your_real_key_here" }
