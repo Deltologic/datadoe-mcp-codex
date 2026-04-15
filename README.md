@@ -1,4 +1,4 @@
-# DataDoe MCP + Codex Example
+# DataDoe MCP + Codex Integration Project Template
 
 This repository is a minimal example of using the DataDoe MCP server from Codex for Amazon-focused workflows.
 
