@@ -10,6 +10,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
 - [Recommended repository cleanup](#recommended-repository-cleanup)
+- [Security roadmap](#security-roadmap)
 - [Tags](#tags)
 
 ## What you can do with this repo
@@ -31,13 +32,11 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
    git clone https://github.com/Deltologic/datadoe-mcp-codex
    cd datadoe-mcp-codex
    ```
-2. Copy `.env.example` to `.env` and set your real key:
-   - `DATADOE_MCP_KEY=your_real_key_here`
-3. Confirm `.codex/config.toml` has the DataDoe MCP server config:
+2. Open `.codex/config.toml` and paste your real MCP key directly:
    - `url = "https://api.datadoe.com/mcp/v1"`
-   - `env_http_headers = { "datadoe-mcp-key" = "DATADOE_MCP_KEY" }`
-4. Run `codex mcp` (or `/mcp` in TUI) and verify `datadoe` is active.
-5. Start Codex and ask an Amazon-related question.
+   - `http_headers = { datadoe-mcp-key = "your_real_key_here" }`
+3. Run `codex mcp` (or `/mcp` in TUI) and verify `datadoe` is active.
+4. Start Codex and ask an Amazon-related question.
 
 > [!CAUTION]
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
@@ -67,6 +66,10 @@ For each repository using this template, keep settings lean:
 - Disable Discussions if not used.
 - Keep branch protection minimal but enabled for your main branch.
 - Do not commit `.env` or real API keys.
+
+## Security roadmap
+
+We are working on a more secure way of passing the MCP key into the TOML file to avoid storing real secrets directly in `.codex/config.toml`.
 
 ## Tags
 
