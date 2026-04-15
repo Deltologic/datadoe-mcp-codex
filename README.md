@@ -31,7 +31,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 
 Before using this setup, install at least one Codex runtime:
 
-- Codex CLI:
+- Codex CLI:`
   - `npm i -g @openai/codex`
 - Codex Desktop app:
   - Install from [Codex App](https://developers.openai.com/codex/app)
@@ -58,6 +58,8 @@ Before using this setup, install at least one Codex runtime:
    - `./scripts/start-codex.sh --desktop`
    - `./scripts/start-codex.sh --check`
 7. Verify MCP setup in Codex using `codex mcp` (or `/mcp` in TUI) and confirm `datadoe` is active.
+8. After successful setup, try an example prompt in the Agent:
+   - `Show me all sellers and vendors`
 
 ## Launcher script manual
 
