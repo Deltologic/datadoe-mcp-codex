@@ -26,7 +26,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 
 - A starter setup for connecting Codex to DataDoe MCP.
 - A reference for secure local API key configuration.
-- A base project for asking Amazon selling questions through MCP in Codex.
+- A base project for e-commerce and online marketplace selling workflows through DataDoe MCP in Codex.
 
 ## Prerequisites
 
