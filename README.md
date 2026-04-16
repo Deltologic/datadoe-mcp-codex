@@ -144,4 +144,4 @@ For each repository using this template, keep settings lean:
 
 ## Tags
 
-`DataDoe` `MCP` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting`
+`DataDoe` `MCP` `OpenAI` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting` `E-Commerce` `Online Marketplaces`
