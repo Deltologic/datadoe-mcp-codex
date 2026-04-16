@@ -13,7 +13,6 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
 - [Recommended repository cleanup](#recommended-repository-cleanup)
-- [Security roadmap](#security-roadmap)
 - [Tags](#tags)
 
 ## What you can do with this repo
@@ -143,10 +142,6 @@ For each repository using this template, keep settings lean:
 - Keep branch protection minimal but enabled for your main branch.
 - Do not commit `.env` or real API keys.
 
-## Security roadmap
-
-We are continuing work on even more secure key-passing options so users do not need to store real secrets directly in `.codex/config.toml`.
-
 ## Tags
 
-`DataDoe` `MCP` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting`
+`DataDoe` `MCP` `OpenAI` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting` `E-Commerce` `Online Marketplaces`
