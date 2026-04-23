@@ -3,7 +3,7 @@
 The following are example prompts you can use with DataDoe MCP for Amazon.com seller operations.  
 You can copy-paste or adapt these as needed in your workflows.
 
-> **Note:**  
+> [!NOTE]  
 > Some example prompts contain parameters in curly braces (e.g., `{{seller_name}}`).  
 > When using these prompts, always replace parameters with your actual account name, ASIN, SKU, or other relevant value.  
 > For example, if your seller account is "Acme Brands", update `{{seller_name}}` to "Acme Brands".
