@@ -5,7 +5,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 ## Table of contents
 
 - [What you can do with this repo](#what-you-can-do-with-this-repo)
-- [What this repo is](#what-this-repo-is)
+- [What This Repo Includes](#what-this-repo-includes)
 - [Prerequisites](#prerequisites)
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to start working with it](#how-to-start-working-with-it)
@@ -20,11 +20,11 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - Ask Amazon seller questions using DataDoe-backed data.
 - Reuse this setup as a template for new Amazon-focused assistant projects.
 
-## What this repo is
+## What This Repo Includes
 
-- A starter setup for connecting Codex to DataDoe MCP.
-- A reference for secure local API key configuration.
-- A base project for e-commerce and online marketplace selling workflows through DataDoe MCP in Codex.
+- Codex CLI + MCP integration guidance for a project-scoped `datadoe` server
+- Secure secret handling with `.env` and `.env.example`
+- Repository-specific assistant rules in `AGENTS.md`
 
 ## Prerequisites
 
@@ -92,7 +92,8 @@ Use it as a starter pack:
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING] > `scripts/start-codex.sh` is the protected launcher for this repository.
+> [!WARNING]
+> `scripts/start-codex.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
