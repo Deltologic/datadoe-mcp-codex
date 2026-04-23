@@ -7,11 +7,11 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [What you can do with this repo](#what-you-can-do-with-this-repo)
 - [What this repo is](#what-this-repo-is)
 - [Prerequisites](#prerequisites)
+- [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to start working with it](#how-to-start-working-with-it)
 - [Example prompt library starter pack](#example-prompt-library-starter-pack)
 - [Run Codex from Dedicated Launcher](#run-codex-from-dedicated-launcher)
 - [Fallback: direct key in TOML](#fallback-direct-key-in-toml)
-- [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
 
 ## What you can do with this repo
@@ -36,6 +36,17 @@ Before using this setup, install at least one Codex runtime:
   ```
 - Codex Desktop app:
   - Install from [Codex App](https://developers.openai.com/codex/app)
+
+## How to get a DataDoe subscription and get MCP Key
+
+1. Go to [app.datadoe.com](https://app.datadoe.com).
+2. Create an account.
+3. Purchase a subscription.
+4. Accept the Terms and Conditions and Privacy Policy.
+5. Go to the `Integrations` module.
+6. Click the `MCP` tile (this navigates to `/integrations/mcp`).
+7. Click `MCP Key`, then add a name and expiration date, and click `Create`.
+8. Copy the key and store it in a secure secret manager or another safe location.
 
 ## How to start working with it
 
@@ -130,17 +141,6 @@ This fallback is less secure because the real secret is stored in the TOML file.
 > [!CAUTION]
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
 > If a key is exposed, rotate it immediately.
-
-## How to get a DataDoe subscription and get MCP Key
-
-1. Go to [app.datadoe.com](https://app.datadoe.com).
-2. Create an account.
-3. Purchase a subscription.
-4. Accept the Terms and Conditions and Privacy Policy.
-5. Go to the `Integrations` module.
-6. Click the `MCP` tile (this navigates to `/integrations/mcp`).
-7. Click `MCP Key`, then add a name and expiration date, and click `Create`.
-8. Copy the key and store it in a secure secret manager or another safe location.
 
 ## How to get help
 
