@@ -8,6 +8,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [What this repo is](#what-this-repo-is)
 - [Prerequisites](#prerequisites)
 - [How to start working with it](#how-to-start-working-with-it)
+- [Example prompt library starter pack](#example-prompt-library-starter-pack)
 - [Launcher script manual](#launcher-script-manual)
 - [Fallback: direct key in TOML](#fallback-direct-key-in-toml)
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
@@ -32,7 +33,9 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 Before using this setup, install at least one Codex runtime:
 
 - Codex CLI:`
-  - `npm i -g @openai/codex`
+  ```bash
+  npm i -g @openai/codex
+  ```
 - Codex Desktop app:
   - Install from [Codex App](https://developers.openai.com/codex/app)
 
@@ -49,7 +52,9 @@ Before using this setup, install at least one Codex runtime:
    - `url = "https://api.datadoe.com/mcp/v1"`
    - `env_http_headers = { datadoe-mcp-key = "DATADOE_MCP_KEY" }`
 4. Start the interactive launcher (it loads `.env` for you):
-   - `./scripts/start-codex.sh`
+   ```bash
+   sh ./scripts/start-codex.sh
+   ```
 5. In the launcher menu, choose:
    - `1` to open Codex CLI
    - `2` to open Codex Desktop app
@@ -61,11 +66,27 @@ Before using this setup, install at least one Codex runtime:
 8. After successful setup, try an example prompt in the Agent:
    - `Show me all sellers and vendors`
 
+## Example prompt library starter pack
+
+To help you start faster with an AI Agent + DataDoe MCP workflow, this repo includes a small prompt library at:
+
+- `.codex/prompts/EXAMPLES.md`
+
+Use it as a starter pack:
+
+1. Open `.codex/prompts/EXAMPLES.md`.
+2. Copy a prompt block and adjust placeholders (for example `{{seller_name}}`) to your account context.
+3. Run the prompt in Cursor chat with DataDoe MCP enabled.
+4. Save your own high-performing prompts in the same file to build a reusable internal playbook.
+
 ## Launcher script manual
 
 Script path:
 
 - `./scripts/start-codex.sh`
+
+> [!WARNING] > `scripts/start-codex.sh` is the protected launcher for this repository.
+> Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 What it does:
 
@@ -76,7 +97,7 @@ What it does:
 Interactive mode:
 
 ```bash
-./scripts/start-codex.sh
+sh ./scripts/start-codex.sh
 ```
 
 Menu options:
@@ -94,12 +115,12 @@ Flags:
 
 Examples:
 
-```bash
-./scripts/start-codex.sh --help
-./scripts/start-codex.sh --check
-./scripts/start-codex.sh --cli
-./scripts/start-codex.sh --desktop
-```
+````bash
+sh ./scripts/start-codex.sh --help
+sh ./scripts/start-codex.sh --check
+sh ./scripts/start-codex.sh --cli
+sh ./scripts/start-codex.sh --desktop
+``'
 
 ## Fallback: direct key in TOML
 
@@ -109,7 +130,7 @@ If your environment cannot provide `DATADOE_MCP_KEY`, use direct key fallback in
 [mcp_servers.datadoe]
 url = "https://api.datadoe.com/mcp/v1"
 http_headers = { datadoe-mcp-key = "your_real_key_here" }
-```
+````
 
 This fallback is less secure because the real secret is stored in the TOML file.
 
