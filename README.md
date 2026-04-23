@@ -5,16 +5,14 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 ## Table of contents
 
 - [What you can do with this repo](#what-you-can-do-with-this-repo)
-- [What this repo is](#what-this-repo-is)
+- [What This Repo Includes](#what-this-repo-includes)
 - [Prerequisites](#prerequisites)
+- [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to start working with it](#how-to-start-working-with-it)
 - [Example prompt library starter pack](#example-prompt-library-starter-pack)
 - [Run Codex from Dedicated Launcher](#run-codex-from-dedicated-launcher)
 - [Fallback: direct key in TOML](#fallback-direct-key-in-toml)
-- [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
-- [Recommended repository cleanup](#recommended-repository-cleanup)
-- [Tags](#tags)
 
 ## What you can do with this repo
 
@@ -22,11 +20,11 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - Ask Amazon seller questions using DataDoe-backed data.
 - Reuse this setup as a template for new Amazon-focused assistant projects.
 
-## What this repo is
+## What This Repo Includes
 
-- A starter setup for connecting Codex to DataDoe MCP.
-- A reference for secure local API key configuration.
-- A base project for e-commerce and online marketplace selling workflows through DataDoe MCP in Codex.
+- Codex CLI + MCP integration guidance for a project-scoped `datadoe` server
+- Secure secret handling with `.env` and `.env.example`
+- Repository-specific assistant rules in `AGENTS.md`
 
 ## Prerequisites
 
@@ -38,6 +36,17 @@ Before using this setup, install at least one Codex runtime:
   ```
 - Codex Desktop app:
   - Install from [Codex App](https://developers.openai.com/codex/app)
+
+## How to get a DataDoe subscription and get MCP Key
+
+1. Go to [app.datadoe.com](https://app.datadoe.com).
+2. Create an account.
+3. Purchase a subscription.
+4. Accept the Terms and Conditions and Privacy Policy.
+5. Go to the `Integrations` module.
+6. Click the `MCP` tile (this navigates to `/integrations/mcp`).
+7. Click `MCP Key`, then add a name and expiration date, and click `Create`.
+8. Copy the key and store it in a secure secret manager or another safe location.
 
 ## How to start working with it
 
@@ -132,33 +141,11 @@ This fallback is less secure because the real secret is stored in the TOML file.
 
 > [!CAUTION]
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
+> Never commit real keys to git.
 > If a key is exposed, rotate it immediately.
-
-## How to get a DataDoe subscription and get MCP Key
-
-1. Go to [app.datadoe.com](https://app.datadoe.com).
-2. Create an account.
-3. Purchase a subscription.
-4. Accept the Terms and Conditions and Privacy Policy.
-5. Go to the `Integrations` module.
-6. Click the `MCP` tile (this navigates to `/integrations/mcp`).
-7. Click `MCP Key`, then add a name and expiration date, and click `Create`.
-8. Copy the key and store it in a secure secret manager or another safe location.
 
 ## How to get help
 
 - Email: [contact@datadoe.com](mailto:contact@datadoe.com)
-
-## Recommended repository cleanup
-
-For each repository using this template, keep settings lean:
-
-- Disable GitHub Wiki if not used.
-- Disable GitHub Projects if not used.
-- Disable Discussions if not used.
-- Keep branch protection minimal but enabled for your main branch.
-- Do not commit `.env` or real API keys.
-
-## Tags
-
-`DataDoe` `MCP` `OpenAI` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting` `E-Commerce` `Online Marketplaces`
+- Codex Docs: [openai/codex](https://developers.openai.com/codex)
+- Codex CLI: [openai/codex/cli](https://developers.openai.com/codex/cli)
