@@ -13,8 +13,6 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [Fallback: direct key in TOML](#fallback-direct-key-in-toml)
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
-- [Recommended repository cleanup](#recommended-repository-cleanup)
-- [Tags](#tags)
 
 ## What you can do with this repo
 
@@ -83,8 +81,7 @@ Use it as a starter pack:
 
 This repository includes a dedicated launcher script:
 
-> [!WARNING]
-> `scripts/start-codex.sh` is the protected launcher for this repository.
+> [!WARNING] > `scripts/start-codex.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
 ```bash
@@ -148,17 +145,5 @@ This fallback is less secure because the real secret is stored in the TOML file.
 ## How to get help
 
 - Email: [contact@datadoe.com](mailto:contact@datadoe.com)
-
-## Recommended repository cleanup
-
-For each repository using this template, keep settings lean:
-
-- Disable GitHub Wiki if not used.
-- Disable GitHub Projects if not used.
-- Disable Discussions if not used.
-- Keep branch protection minimal but enabled for your main branch.
-- Do not commit `.env` or real API keys.
-
-## Tags
-
-`DataDoe` `MCP` `OpenAI` `Codex` `Amazon` `Amazon Seller` `AI Assistant` `LLM` `Prompting` `E-Commerce` `Online Marketplaces`
+- Codex Docs: [openai/codex](https://developers.openai.com/codex)
+- Codex CLI: [openai/codex/cli](https://developers.openai.com/codex/cli)
