@@ -32,7 +32,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 
 Before using this setup, install at least one Codex runtime:
 
-- Codex CLI:`
+- Codex CLI:
   ```bash
   npm i -g @openai/codex
   ```
@@ -115,12 +115,12 @@ Flags:
 
 Examples:
 
-````bash
+```bash
 sh ./scripts/start-codex.sh --help
 sh ./scripts/start-codex.sh --check
 sh ./scripts/start-codex.sh --cli
 sh ./scripts/start-codex.sh --desktop
-``'
+```
 
 ## Fallback: direct key in TOML
 
@@ -130,7 +130,7 @@ If your environment cannot provide `DATADOE_MCP_KEY`, use direct key fallback in
 [mcp_servers.datadoe]
 url = "https://api.datadoe.com/mcp/v1"
 http_headers = { datadoe-mcp-key = "your_real_key_here" }
-````
+```
 
 This fallback is less secure because the real secret is stored in the TOML file.
 
