@@ -9,7 +9,7 @@ This repository is a minimal example of using the DataDoe MCP server from Codex 
 - [Prerequisites](#prerequisites)
 - [How to start working with it](#how-to-start-working-with-it)
 - [Example prompt library starter pack](#example-prompt-library-starter-pack)
-- [Launcher script manual](#launcher-script-manual)
+- [Run Codex from Dedicated Launcher](#run-codex-from-dedicated-launcher)
 - [Fallback: direct key in TOML](#fallback-direct-key-in-toml)
 - [How to get a DataDoe subscription and get MCP Key](#how-to-get-a-datadoe-subscription-and-get-mcp-key)
 - [How to get help](#how-to-get-help)
@@ -53,7 +53,7 @@ Before using this setup, install at least one Codex runtime:
    - `env_http_headers = { datadoe-mcp-key = "DATADOE_MCP_KEY" }`
 4. Start the interactive launcher (it loads `.env` for you):
    ```bash
-   sh ./scripts/start-codex.sh
+   ./scripts/start-codex.sh
    ```
 5. In the launcher menu, choose:
    - `1` to open Codex CLI
@@ -79,47 +79,42 @@ Use it as a starter pack:
 3. Run the prompt in Codex Desktop app or Codex CLI chat with DataDoe MCP enabled.
 4. Save your own high-performing prompts in the same file to build a reusable internal playbook.
 
-## Launcher script manual
+## Run Codex from Dedicated Launcher
 
-Script path:
-
-- `./scripts/start-codex.sh`
+This repository includes a dedicated launcher script:
 
 > [!WARNING] > `scripts/start-codex.sh` is the protected launcher for this repository.
 > Do not edit, replace, or "quick fix" it unless you are intentionally changing launcher behavior.
 
-What it does:
-
-- Loads `DATADOE_MCP_KEY` from `.env`
-- Provides interactive mode to choose Codex CLI or Codex Desktop
-- Handles missing Codex CLI/Desktop with clear error hints
-
-Interactive mode:
-
 ```bash
-sh ./scripts/start-codex.sh
+./scripts/start-codex.sh
 ```
 
-Menu options:
+The launcher loads `.env`, exports `DATADOE_MCP_KEY` into the current process, and then starts Codex CLI or Codex Desktop from the repository root.
 
-- `1` launch Codex CLI
-- `2` launch Codex Desktop app
-- `3` exit safely
-
-Flags:
-
-- `--help` show script manual with colored output
-- `--check` validate `.env` and key loading without launching Codex
-- `--cli` launch Codex CLI directly
-- `--desktop` launch Codex Desktop directly
-
-Examples:
+Short manual:
 
 ```bash
-sh ./scripts/start-codex.sh --help
-sh ./scripts/start-codex.sh --check
-sh ./scripts/start-codex.sh --cli
-sh ./scripts/start-codex.sh --desktop
+# Interactive menu (recommended)
+./scripts/start-codex.sh
+
+# Direct launch Codex CLI
+./scripts/start-codex.sh --cli
+
+# Direct launch Codex Desktop
+./scripts/start-codex.sh --desktop
+
+# Validate env loading + launcher availability only
+./scripts/start-codex.sh --check
+
+# Help
+./scripts/start-codex.sh --help
+```
+
+If needed, make it executable once:
+
+```bash
+chmod +x ./scripts/start-codex.sh
 ```
 
 ## Fallback: direct key in TOML
