@@ -140,6 +140,7 @@ This fallback is less secure because the real secret is stored in the TOML file.
 
 > [!CAUTION]
 > Treat `DATADOE_MCP_KEY` like a password. Do not publish repositories, screenshots, or logs that contain this key.
+> Never commit real keys to git.
 > If a key is exposed, rotate it immediately.
 
 ## How to get help
