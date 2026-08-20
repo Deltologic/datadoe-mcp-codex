@@ -58,7 +58,7 @@ Before using this setup, install at least one Codex runtime:
 2. Copy `.env.example` to `.env` and set your real key:
    - `DATADOE_MCP_KEY=your_real_key_here`
 3. Configure `.codex/config.toml` to use env-based headers (default, recommended):
-   - `url = "https://api.datadoe.com/mcp/v1"`
+   - `url = "https://mcp.datadoe.com/mcp/v1"`
    - `env_http_headers = { datadoe-mcp-key = "DATADOE_MCP_KEY" }`
 4. Start the interactive launcher (it loads `.env` for you):
    ```bash
@@ -133,7 +133,7 @@ If your environment cannot provide `DATADOE_MCP_KEY`, use direct key fallback in
 
 ```toml
 [mcp_servers.datadoe]
-url = "https://api.datadoe.com/mcp/v1"
+url = "https://mcp.datadoe.com/mcp/v1"
 http_headers = { datadoe-mcp-key = "your_real_key_here" }
 ```
 
